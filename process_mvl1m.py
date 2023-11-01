@@ -21,7 +21,7 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as ssp
 import torch
-import torchtext
+# import torchtext
 from builder import PandasGraphBuilder
 from data_utils import *
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     # Load data
     users = []
-    with open(os.path.join(directory, "users.dat"), encoding="latin1") as f:
+    with open(os.path.join(directory, "u.user"), encoding="latin1") as f:
         for l in f:
             id_, gender, age, occupation, zip_ = l.strip().split("::")
             users.append(
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     users = pd.DataFrame(users).astype("category")
 
     movies = []
-    with open(os.path.join(directory, "movies.dat"), encoding="latin1") as f:
+    with open(os.path.join(directory, "u.item"), encoding="latin1") as f:
         for l in f:
             id_, title, genres = l.strip().split("::")
             genres_set = set(genres.split("|"))
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     movies = pd.DataFrame(movies).astype({"year": "category"})
 
     ratings = []
-    with open(os.path.join(directory, "ratings.dat"), encoding="latin1") as f:
+    with open(os.path.join(directory, "u.data"), encoding="latin1") as f:
         for l in f:
             user_id, movie_id, rating, timestamp = [
                 int(_) for _ in l.split("::")
