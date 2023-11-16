@@ -4,11 +4,11 @@ Clone from https://github.com/dmlc/dgl/tree/master/examples/pytorch/pinsage
 # Data format MovieLens-1m
 gồm 3 file chính movies.dat, ratings.dat, users.dat được mô tả và cấu trúc như sau:
 Để dễ dàng chạy khuyến khích đổi tên file y hệt để không phải chỉnh tên file vì code đang fix cứng file path
-[!Alt Text](img/fol.png)
+![Alt Text](img/fol.png)
 
 ## movies.dat: `id`, `name`, `category` x n (split by `::`)
 
-[!Alt Text](img/mv.png)
+![Alt Text](img/mv.png)
 
 - Titles are identical to titles provided by the IMDB (including
 year of release)
@@ -38,7 +38,7 @@ year of release)
 
 ## users.dat: `id`, `gender`, `age`, `occupation`, `timestamp` (split by `::`)
 
-[!Alt Text](img/user.png)
+![Alt Text](img/user.png)
 
 - Gender is denoted by a "M" for male and "F" for female
 - Age is chosen from the following ranges:
@@ -79,7 +79,7 @@ year of release)
 	Ví dụ: 5::M::25::20::55455
 
 ## ratings.dat: `user_id`, `movie_id`, `rating`, `zipcode` (split by `::`)
-[!Alt Text](img/rt.png)
+![Alt Text](img/rt.png)
 	Ví dụ: 1::914::3::978301968
 
 Lưu ý có thể đổi tên folder chứa 3 file này thành `ml-1m` để đỡ phải config quá nhiều
